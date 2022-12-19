@@ -15,3 +15,13 @@
 .card-title{
     color:rgb(36, 103, 141);
 }
+
+.form-group{
+    text-align: left;
+}
+.contact-form{
+    padding: 3rem 0;
+}
+.page-title{
+    color: white;
+}

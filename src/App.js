@@ -1,9 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
+import Footer from './components/Footer/Footer';
 
 import { PentaNavbar } from './components/Navbar/PentaNavbar';
 import About from './components/pages/About';
 import Contact from './components/pages/Contact';
+import Customers from './components/pages/Customers';
 import Home from './components/pages/Home';
 function App() {
   return (
@@ -14,9 +16,10 @@ function App() {
             <Route exact path='/' element={<Home/>}/>
             <Route path='/about' element={<About/>}/>
             <Route path='/contact' element={<Contact/>}/>
+            <Route path='/customers' element={<Customers/>}/>
         </Routes>
       </Router>  
-      
+      <Footer></Footer>
     </div>
   );
 }

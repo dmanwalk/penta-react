@@ -37,6 +37,9 @@ export const PentaNavbar = () => {
               <a href="/">Home</a>
             </li>
             <li>
+              <a href="/customers">Customers</a>
+            </li>
+            <li>
               <a href="/about">About</a>
             </li>
             <li>
