@@ -45,6 +45,9 @@ export const PentaNavbar = () => {
             <li>
               <a href="/contact">Contact</a>
             </li>
+            <li>
+              <a href="/login">Login</a>
+            </li>
           </ul>
         </div>
       </nav>

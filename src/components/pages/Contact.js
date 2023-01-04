@@ -13,6 +13,7 @@ export const Contact = () => {
     const [company, setCompany] = useState('');
     const [message, setMessage] = useState('');
     const[loading, setLoading] = useState(false);
+    const[success,setSuccess] = useState(false)
 
     const submitHandler = async (e) =>{
       e.preventDefault(); //prevent page from refreshing
@@ -21,7 +22,7 @@ export const Contact = () => {
       }
       try{
         setLoading(true);
-        const {data} = await axios.post('/api/email',{
+        const {data} = await axios.post('http://localhost:8000/api/email',{
           firstName,
           lastName,
           phoneNumber,
@@ -87,7 +88,7 @@ export const Contact = () => {
           <textarea onChange={(e) =>setMessage(e.target.value)} className="form-control" id="message" rows="3"></textarea>
         </div>
         <br></br>
-        <button disabled={loading} type="submit" className="btn btn-primary">{loading ? 'Submitting...' : 'Submit'}</button>
+        <button disabled={loading||success} type="submit" className="btn btn-primary">{loading ? 'Submitting...' : 'Submit'}</button>
         </form>
       </div>
     </div>
